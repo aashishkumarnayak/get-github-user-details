@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header ">
+
+      <span class="badge bg-primary mx-3">
+        {{githubProfile.followers}} followers
+      </span>
+      <span class="badge bg-primary mx-3">
+        {{githubProfile.public_repos}} Repos
+      </span>
+
+
+    <span class="badge bg-warning mx-3"
+      >{{githubProfile.public_gists}} Gists
+    </span>
+    <span class="badge bg-danger mx-3"
+      >{{ githubProfile.following }} Following
+    </span>
+  </div>
+
+  <div class="card-body">
+    <div class= "card-body">
+      <ul class= "list-group" mx-3>
+        <li class="list-group-item">
+          Name : <span class=" fw-bold">{{githubProfile.name}}</span>
+
+
+        </li>
+        <li class= "list-group-item text-wrap">
+          Bio : {{githubProfile.bio}}
+        </li>
+        <li class= "list-group-item">
+          location : {{githubProfile.location}}
+        </li>
+        <li class= "list-group-item">
+          Twitter : {{githubProfile.twitter_username}}
+        </li>
+        <li class= "list-group-item">
+          Company : {{githubProfile.company}}
+        </li>
+        <li class= "list-group-item">
+          Blog : {{githubProfile.blog}}
+        </li>
+        <li class= "list-group-item">
+          Profile_URL : <a [href]="githubProfile.html_url" target="_blank">{{githubProfile.html_url}}</a>
+        </li>
+      </ul>
+   </div>
+
+  </div>
+</div>

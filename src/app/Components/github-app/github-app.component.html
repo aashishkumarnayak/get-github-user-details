@@ -1,0 +1,45 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h4>Github user Search</h4>
+        </div>
+        <div class="card-body">
+          <form class="form-inline" (submit)="searchUser()">
+            <div class="form-group mb-3">
+             <input [(ngModel)]="githubUserQuery" name="user" type="search" class="form-control" id="exampleInputGithubUsername1"  placeholder="Enter your github username">
+            </div>
+            <!-- {{githubUserQuery}} -->
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <div class="row">
+  <div class="col">
+   <pre>
+    {{githubProfile | json}}
+   </pre>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col">
+   <pre>
+    <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+   </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+   <pre>
+   <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
+   </pre>
+  </div>
+</div>
+
+</div>
